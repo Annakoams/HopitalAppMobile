@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, ScrollView, Image, FlatList, TouchableOpacity } from 'react-native';
 import dashbordStyles from './styleHome.js';
 import { FakeActivity } from '../../fakeData/FakeActivity.js'
-// import SVG_HOSPITAL from '../../assets/images/svg/undraw_medicine_b-1-ol.svg'
+import SVG_HOSPITAL from '../../assets/images/svg/undraw_medicine_b-1-ol.svg'
 
 const Home = () => {
 
@@ -25,7 +25,7 @@ const Home = () => {
         renderItem={({ item }) => {
           return (
             <TouchableOpacity style={dashbordStyles.scrollableListItem}>
-              {/* <SVG_HOSPITAL width={48} height={48} /> */}
+              <SVG_HOSPITAL width={48} height={48} />
               <Text style={dashbordStyles.mainText}>{item.mainText}</Text>
               <Text style={dashbordStyles.subText}>{item.subText}</Text>
             </TouchableOpacity>)

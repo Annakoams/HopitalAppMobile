@@ -1,14 +1,15 @@
 import { StyleSheet } from 'react-native'
 import { PADDING } from '../../outils/constantes'
 
-const dashbordStyles = StyleSheet.create({
+const DashboardStyles = StyleSheet.create({
     header: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
         paddingHorizontal: PADDING.horizontal,
         paddingVertical: PADDING.vertical,
-        backgroundColor: 'white'
+        backgroundColor: 'white',
+        marginBottom: 15,
     },
     userImg: {
         width: 50,
@@ -18,28 +19,22 @@ const dashbordStyles = StyleSheet.create({
     userName: {
         fontSize: 16,
     },
-    // stylise  la flatlist
     scrollableList: {
+        paddingHorizontal: PADDING.horizontal,
+        paddingVertical: PADDING.vertical
+    },
+
+    title: {
         paddingHorizontal: PADDING.horizontal,
         paddingVertical: PADDING.vertical,
 
     },
-    scrollableListItem: {
-        paddingHorizontal: 15,
-        paddingVertical: 15,
-        marginRight: 15,
-        backgroundColor: 'white',
-        elevation: 1,
-    },
-    mainText: {
+    titleBold: {
         fontWeight: 'bold',
-        fontSize: 16,
-    },
-    subText: {
-        marginTop: 5,
-        fontSize: 12,
     }
+
+
 
 })
 
-export default dashbordStyles
+export default DashboardStyles

@@ -1,8 +1,8 @@
 export const FakeActivity = [
     {
         id: 1,
-        mainText: "Docteur a domicile",
-        subText: 'votre Docteur a domicile',
+        mainText: "Doctor a domicile",
+        subText: 'votre Doctor a domicile',
 
     },
     {

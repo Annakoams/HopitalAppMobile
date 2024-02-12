@@ -1,17 +1,16 @@
 import React from 'react';
-import { View, Text, ScrollView, Image, FlatList, TouchableOpacity } from 'react-native';
-import dashbordStyles from './styleHome.js';
+import { View, Text, ScrollView, Image, FlatList } from 'react-native';
+import DashboardStyles from './styleHome.js';
 import { FakeActivity } from '../../fakeData/FakeActivity.js'
-import SVG_HOSPITAL from '../../assets/images/svg/undraw_medicine_b-1-ol.svg'
-
+import Activity from '../../components/ActivityItems/Activity.js';
 const Home = () => {
 
   return (
     <ScrollView>
       {/* debut de header */}
-      <View style={dashbordStyles.header}>
-        <Text style={dashbordStyles.userName}>John Doe</Text>
-        <Image source={require('../../assets/photo_profil.jpeg')} style={dashbordStyles.userImg} />
+      <View style={DashboardStyles.header}>
+        <Text style={DashboardStyles.userName}>John Doe</Text>
+        <Image source={require('../../assets/photo_profile.jpeg')} style={DashboardStyles.userImg} />
       </View>
       {/* fin de header */}
 
@@ -21,17 +20,28 @@ const Home = () => {
         keyExtractor={(item) => item.id}
         horizontal
         showsHorizontalScrollIndicator={false}
-        style={dashbordStyles.scrollableList}
+        style={DashboardStyles.scrollableList}
         renderItem={({ item }) => {
           return (
-            <TouchableOpacity style={dashbordStyles.scrollableListItem}>
-              <SVG_HOSPITAL width={48} height={48} />
-              <Text style={dashbordStyles.mainText}>{item.mainText}</Text>
-              <Text style={dashbordStyles.subText}>{item.subText}</Text>
-            </TouchableOpacity>)
+            <Activity item={item} />)
         }}
       />
       {/* Fin de la liste des activités */}
+      {/* liste de symptoms */}
+      <View styles={DashboardStyles.title}>
+        <Text styles={DashboardStyles.titleBold}>Quells symptoms present vous ?</Text>
+      </View>
+      <FlatList
+        data={FakeActivity}
+        keyExtractor={(item) => item.id}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        style={DashboardStyles.scrollableList}
+        renderItem={({ item }) => {
+          return (
+            <Activity item={item} />)
+        }}
+      />
     </ScrollView>
   );
 }

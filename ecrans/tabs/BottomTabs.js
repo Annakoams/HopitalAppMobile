@@ -10,6 +10,7 @@ import Settings from '../Settings/index.js'
 
 
 
+
 const BottomTabs = () => {
 
   const Tab = createBottomTabNavigator();

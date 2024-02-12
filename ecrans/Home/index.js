@@ -22,7 +22,6 @@ const Home = () => {
         horizontal
         showsHorizontalScrollIndicator={false}
         style={dashbordStyles.scrollableList}
-
         renderItem={({ item }) => {
           return (
             <TouchableOpacity style={dashbordStyles.scrollableListItem}>

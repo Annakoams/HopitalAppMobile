@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import { PADDING } from '../../outils/constantes'
+import { COLORS, PADDING } from '../../outils/constantes'
 
 const DashboardStyles = StyleSheet.create({
     header: {
@@ -31,8 +31,58 @@ const DashboardStyles = StyleSheet.create({
     },
     titleBold: {
         fontWeight: 'bold',
-    }
+    },
+    title_space_between: {
+        paddingHorizontal: PADDING.horizontal,
+        paddingVertical: PADDING.vertical,
+        marginTop: 15,
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+    },
+    link: {
+        color: COLORS.main
+    },
+    doctorsContainer: {
+        marginTop: 10,
+        paddingHorizontal: PADDING.horizontal,
+        paddingVertical: PADDING.vertical,
+    },
+    doctorCart: {
+        flex: 1,
+        flexDirection: 'row',
+        backgroundColor: 'white',
+        elevation: 5,
+        padding: 10,
+        paddingHorizontal: PADDING.horizontal,
+        paddingVertical: PADDING.vertical,
+        marginBottom: 20,
+        borderRadius: 5,
 
+    },
+    doctorImg: {
+        width: 80,
+        height: 80,
+        borderRadius: 80 / 2,
+        marginRight: 15,
+
+    },
+    doctorInfo: {
+        flexDirection: 'column',
+    },
+    doctorName: {
+        fontWeight: 'bold',
+        fontSize: 16,
+        marginBottom: 15
+    },
+    doctorSpec: {
+        backgroundColor: COLORS.main,
+        padding: 5,
+        paddingHorizontal: PADDING.horizontal,
+        borderRadius: 15,
+        fontSize: 14,
+        color: 'white'
+
+    }
 
 
 })

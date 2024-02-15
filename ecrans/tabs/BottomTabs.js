@@ -25,7 +25,7 @@ const BottomTabs = () => {
         headerShown: false,
         tabBarStyle: {
           backgroundColor: "blue",
-          position: "absolute",
+          position: "fixed",
           borderRadius: 0,
           bottom: 0,
           left: 0,

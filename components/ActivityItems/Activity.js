@@ -1,8 +1,8 @@
 import { View, Text, Image, FlatList, TouchableOpacity } from 'react-native'
 import React from 'react'
 import SVG_HOSPITAL from '../../assets/images/svg/images.svg'
-import { FakeActivity } from '../../fakeData/FakeActivity.js'
 import stylesActivity from './stylesActivity'
+
 const Activity = ({ item }) => {
     return (
         <TouchableOpacity style={stylesActivity.scrollableListItem}>

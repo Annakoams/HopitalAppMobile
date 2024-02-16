@@ -30,7 +30,8 @@ const BottomTabs = () => {
           bottom: 0,
           left: 0,
           right: 0,
-          marginHorizontal: 0
+          marginHorizontal: 0,
+          marginTop: 15
         }
       }}
     >

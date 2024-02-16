@@ -13,7 +13,11 @@ const Routes = () => {
         initialRouteName='home'
         screenOptions={{ headerShown: false }}>
         <Stack.Screen name="home" component={BottomTabs} />
-        <Stack.Screen name="MessageDetailles" component={MessageDetailles} />
+        <Stack.Screen
+          name="MessageDetailles"
+          component={MessageDetailles}
+          options={{ headerShown: true }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   )
